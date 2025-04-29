@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Home</title>
+    <style>
+        body {
+            background-color: #dcd7c9;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        body.fade-in {
+            visibility: visible;
+            opacity: 1;
+        }
+        /*Nav*/
+        #navbarBackground {
+            background-color: #a27b5c;
+        }
+        nav #navbar form ul li .btn, main .row .col-12 a.btn{
+            background-color: #3f4f44;
+            border-color: #3f4f44 !important;
+            color: white;
+        }
+        nav #navbar form ul li .btn:hover, main .row .col-12 a.btn:hover {
+            background-color: #1f2722;
+            border-color: #1f2722 !important;
+        }
+        nav #currentPage:hover {
+            border-color: #3f4f44 !important;
+        }
+        /*Main*/
+        main .row .col p {
+            color: #3f4f44;
+        }
+        main .name-container {
+            position: relative;
+            overflow: hidden;
+            height: 50px;
+        }
+        main img {
+            background-color: #3f4f44 !important;
+            border-color: #3f4f44 !important;
+        }
+        main .name-slide {
+            position: absolute;
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+        main .name-slide-up {
+            transform: translateY(-100%);
+        }
+        main .name-slide-down {
+            transform: translateY(0);
+        }
+        /*Footer*/
+        #footerBackground {
+            background-color: #a27b5c;
+        }
+        footer a {
+            text-decoration: none;
+            color: #1f2722;
+        }
+        footer a:hover {
+            font-weight: 750;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" id="navbarBackground">
+            <div class="container-fluid p-3">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <form class="container-fluid d-flex justify-content-center">
+                        <ul class="navbar-nav navbar-nav-scroll d-flex align-items-center">
+                            <!--HOME BUTTON-->
+                            <li class="py-2">
+                                <a href="index.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button" id="currentPage" style="border-color: #1f2722 !important;">Home</a>
+                            </li>
+                            <!--PROJECTS BUTTON-->
+                            <li class="py-2">
+                                <a href="projects.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Projects</a>
+                            </li>
+                            <!--QUIZZES BUTTON-->
+                            <li class="py-2">
+                                <a href="quizzes.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Quizzes</a>
+                            </li>
+                            <!--ABOUT BUTTON-->
+                            <li class="py-2">
+                                <a href="about.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">About</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <main class="container d-flex min-vh-100">
+        <div class="row w-100 align-items-center">
+            <div class="col-md-6 col-12 order-md-1 order-2">
+                <div class="name-container">
+                    <div class="name-slide name-slide-down" id="name1">
+                        <h1 class="text-truncate" style="color: #3f4f44;">XELL</h1>
+                    </div>
+                    <div class="name-slide name-slide-up" id="name2">
+                        <h1 class="text-truncate" style="color: #3f4f44;">IZENN HART DESTURA</h1>
+                    </div>
+                </div>
+                <p class="fs-5 pb-3">Undergraduate at the prestige Cavite State University - Silang Campus</p>
+                <a href="about.html" class="btn rounded-5 pt-2 px-4 py-2 border border-5" type="button">Learn More</a>
+            </div>
+            <div class="col-md-6 col-12 order-md-2 order-1">
+                <img src="images/self portrait.jpg" alt="profilephoto" class="img-thumbnail mx-auto d-block">
+            </div>
+        </div>
+    </main>
+    <footer class="p-3" id="footerBackground">
+        <form class="container-fluid d-flex justify-content-center">
+            <a href="https://www.facebook.com/77izenn" target="_blank" class="p-3">
+                <i class="bi-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://linkedin.com/in/izenn-hart-destura-ab824335a" target="_blank" class="p-3">
+                <i class="bi-linkedin"></i>
+                Linkedin
+            </a>
+            <a href="https://github.com/zxsenn" target="_blank" class="p-3">
+                <i class="bi-github"></i>
+                Github
+            </a>
+        </form>
+    </footer>
+    <script>
+        window.onload = function() {
+        document.body.classList.add('fade-in');
+        };
+        
+        var nameContainer = document.querySelector('.name-container');
+        var name1 = document.getElementById('name1');
+        var name2 = document.getElementById('name2');
+
+        nameContainer.addEventListener('mouseenter', () => {
+            name1.classList.remove('name-slide-down')
+            name1.classList.add('name-slide-up')
+            name2.classList.remove('name-slide-up')
+            name2.classList.add('name-slide-down')
+        });
+        nameContainer.addEventListener('mouseleave', () => {
+            name1.classList.remove('name-slide-up')
+            name1.classList.add('name-slide-down')
+            name2.classList.remove('name-slide-down')
+            name2.classList.add('name-slide-up')
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js
+    "></script>
+</body>
+</html>

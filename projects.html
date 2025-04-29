@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Projects</title>
+    <style>
+        body {
+            background-color: #dcd7c9;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        body.fade-in {
+            visibility: visible;
+            opacity: 1;
+        }
+        #navbarBackground {
+            background-color: #a27b5c;
+        }
+        #navbar form ul li .btn {
+            background-color: #3f4f44;
+            border-color: #3f4f44 !important;
+            color: white;
+        }
+        #navbar form ul li .btn:hover {
+            background-color: #1f2722;
+            border-color: #1f2722 !important;
+        }
+        #currentPage:hover {
+            border-color: #3f4f44 !important;
+        }
+        main .card {
+            background-color: #3f4f44;
+            color: white;
+            border: 0px;
+        }
+        main .card img {
+            height: 30rem;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            main .col {
+                width: 20rem;
+            }
+            main .card img {
+                height: 10rem;
+            }
+        }
+        main .card .btn {
+            background-color: #1f2722;
+            border-color: #1f2722 !important;
+            color: white;
+        }
+        main .card .btn:hover {
+            background-color: #101411;
+            border-color: #101411 !important;
+        }
+        #footerBackground {
+            background-color: #a27b5c;
+        }
+        footer a {
+            text-decoration: none;
+            color: #1f2722;
+        }
+        footer a:hover {
+            font-weight: 750;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" id="navbarBackground">
+        <div class="container-fluid p-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <form class="container-fluid d-flex justify-content-center">
+                    <ul class="navbar-nav navbar-nav-scroll d-flex align-items-center">
+                        <!--HOME BUTTON-->
+                        <li class="py-2">
+                            <a href="index.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Home</a>
+                        </li>
+                        <!--PROJECTS BUTTON-->
+                        <li class="py-2">
+                            <a href="projects.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button" id="currentPage" style="border-color: #1f2722 !important;">Projects</a>
+                        </li>
+                        <!--QUIZZES BUTTON-->
+                        <li class="py-2">
+                            <a href="quizzes.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Quizzes</a>
+                        </li>
+                        <!--ABOUT BUTTON-->
+                        <li class="py-2">
+                            <a href="about.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">About</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container d-flex min-vh-100">
+        <div class="row justify-content-center row-cols-2 row-cols-sm-1">
+            <div class="col p-2">
+                <div class="card shadow-lg rounded-4">
+                    <div class="card-header">
+                        <img class="card-img-top rounded-4" src="projects/hamberberblogscreencap.png" alt="hamberberblogscreencap">
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <h5 class="card-title text-truncate flex-grow-1">
+                            "Hamberber" Web Blog
+                            <div class="fs-6 fw-light">Groupwork</div>
+                        </h5>
+                        <button class="btn rounded-4 ms-2 px-4" type="button" data-bs-toggle="modal" data-bs-target="#projectModal1">Learn More</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="projectModal1" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>"Hamberber" Web Blog</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>The Hamberber Web Blog is a blog powered by Bootstrap to practice web blog development.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-2">
+                <div class="card shadow-lg rounded-4">
+                    <div class="card-header">
+                        <img class="card-img-top rounded-4" src="projects/codexplorerscreencap.jpg" alt="codexplorerscreencap">
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <h5 class="card-title text-truncate flex-grow-1">
+                            CodeXplorer: Coding Wiki for Beginners
+                            <div class="fs-6 fw-light">Groupwork</div>
+                        </h5>
+                        <button class="btn rounded-4 ms-2 px-4" type="button" data-bs-toggle="modal" data-bs-target="#projectModal2">Learn More</button>
+                        
+                    </div>
+                </div>
+                <div class="modal fade" id="projectModal2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>CodeXplorer: Coding Wiki for Beginners</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>CodeXplorer is a coding wiki especially made for beginners. This wiki teaches C#, C++, Java and Python.</p>
+                                <p>Developed with Visual Studio 2019 and Xamarin, the coding wiki was done by a team of IT students, including Izenn Hart, in CvSU Silang Campus in ~2024-2025.</p>
+                                <p>The app features coding information from programming languages such as C#, C++, Java and Python and games (multiple-choice, fill in the blanks, and guess the output) which was sourced from W3School for the convenience of students to an app which has an easy access to their lessons with just one installation to their smartphones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col p-2">
+                <div class="card shadow-lg rounded-4">
+                    <div class="card-header">
+                        <img class="card-img-top rounded-4" src="projects/cvsuscreencap.jpg" alt="cvsuscreencap">
+                    </div>
+                    <div class="card-footer d-flex align-items-center">
+                        <h5 class="card-title text-truncate flex-grow-1">
+                            CvSU Student Form Manager
+                            <div class="fs-6 fw-light">Groupwork</div>
+                        </h5>
+                        <button href="#" class="btn rounded-4 ms-2 px-4" type="button" data-bs-toggle="modal" data-bs-target="#projectModal3">Learn More</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="projectModal3" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>CvSU Student Form Manager</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>CvSU Student Form Manager is a software that prints registration form and certificate of grades for students by teachers.</p>
+                                <p>Developed with Visual Studio 2019 and XAMPP, the student form manager was done by young Izenn Hart in ~2023-2024 with group mates Mark Ulyses and Maria Angelica as a project for their course.</p>
+                                <p>The student form manager features CRUD and printing of registration form and certificate of grades by admins for each semester of the students.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="p-3" id="footerBackground">
+        <form class="container-fluid d-flex justify-content-center">
+            <a href="https://www.facebook.com/77izenn" target="_blank" class="p-3">
+                <i class="bi-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://linkedin.com/in/izenn-hart-destura-ab824335a" target="_blank" class="p-3">
+                <i class="bi-linkedin"></i>
+                Linkedin
+            </a>
+            <a href="https://github.com/zxsenn" target="_blank" class="p-3">
+                <i class="bi-github"></i>
+                Github
+            </a>
+        </form>
+    </footer>
+    <script>
+        window.onload = function() {
+        document.body.classList.add('fade-in');
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js
+    "></script>
+</body>
+</html>

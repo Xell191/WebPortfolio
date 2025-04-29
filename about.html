@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>About</title>
+    <style>
+        body {
+            background-color: #dcd7c9;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+        }
+        body.fade-in {
+            visibility: visible;
+            opacity: 1;
+        }
+        #navbarBackground {
+            background-color: #a27b5c;
+        }
+        #navbar form ul li .btn {
+            background-color: #3f4f44;
+            border-color: #3f4f44 !important;
+            color: white;
+        }
+        #navbar form ul li .btn:hover {
+            background-color: #1f2722;
+            border-color: #1f2722 !important;
+        }
+        #currentPage:hover {
+            border-color: #3f4f44 !important;
+        }
+        #footerBackground {
+            background-color: #a27b5c;
+        }
+        footer a {
+            text-decoration: none;
+            color: #1f2722;
+        }
+        footer a:hover {
+            font-weight: 750;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" id="navbarBackground">
+        <div class="container-fluid p-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <form class="container-fluid d-flex justify-content-center">
+                    <ul class="navbar-nav navbar-nav-scroll d-flex align-items-center">
+                        <!--HOME BUTTON-->
+                        <li class="py-2">
+                            <a href="index.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Home</a>
+                        </li>
+                        <!--PROJECTS BUTTON-->
+                        <li class="py-2">
+                            <a href="projects.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Projects</a>
+                        </li>
+                        <!--QUIZZES BUTTON-->
+                        <li class="py-2">
+                            <a href="quizzes.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button">Quizzes</a>
+                        </li>
+                        <!--ABOUT BUTTON-->
+                        <li class="py-2">
+                            <a href="about.html" class="btn me-1 rounded-5 px-5 py-2 border border-5" type="button" id="currentPage" style="border-color: #1f2722 !important;">About</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container d-flex min-vh-100">
+        <div class="row text-wrap lh-lg">
+            <div class="col-md-4 col-12 my-3 border-end border-dark">
+                <img src="images/self portrait.jpg" alt="profilephoto" class="img-thumbnail mx-auto d-block bg-dark mb-2">
+                <p>
+                    <b>Name:</b> Izenn Hart Destura
+                </p>
+                <p>
+                    <b>Birthdate:</b> April 8
+                </p>
+                <p>
+                    <b>Address:</b> Silang, Cavite, PH
+                </p>
+                <p>
+                    <b>Skills:</b> Web development
+                </p>
+                <p>
+                    <b>Hobbies:</b> Music, working out, art
+                </p>
+                <p>
+                    <b>Personalities:</b> Team-oriented, supportive, curious
+                </p>
+            </div>
+            <div class="col-md-8 col-12 my-3 border-start border-dark">
+                <p>
+                    I am Izenn Hart. I am an IT undergraduate at the Cavite State University - Silang Campus. 
+                </p>
+                <p>
+                    I have experience in C# programming language and web development, and I have ideas in C++, Java, PHP and Javascript.
+                </p>
+                <p>
+                    My hobbies are music, working out, and art. I mostly listen to RnB and indie music, I workout so I would get stronger and look better, and I like art pieces in general. 
+                </p>
+                <p>
+                    I live in Cavite, Philippines. 
+                </p>
+                <p>
+                    My goal is to be a successful app or web developer, a cybersecurity analyst, or a barista for my cafe business. My aim for a work is to still be able to spend time with my love ones and myself.
+                </p>
+                <p>
+                    My dream is to be rich so I could buy the food, gadgets, clothes and footwear that I want, and so I could give the people that I love anything that they need or want.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="p-3" id="footerBackground">
+        <form class="container-fluid d-flex justify-content-center">
+            <a href="https://www.facebook.com/77izenn" target="_blank" class="p-3">
+                <i class="bi-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://linkedin.com/in/izenn-hart-destura-ab824335a" target="_blank" class="p-3">
+                <i class="bi-linkedin"></i>
+                Linkedin
+            </a>
+            <a href="https://github.com/zxsenn" target="_blank" class="p-3">
+                <i class="bi-github"></i>
+                Github
+            </a>
+        </form>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js
+    "></script>
+    <script>
+        window.onload = function() {
+        document.body.classList.add('fade-in');
+        };
+    </script>
+</body>
+</html>
